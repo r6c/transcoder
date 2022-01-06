@@ -22,7 +22,7 @@ type Options struct {
 	AudioBitrate          *string           `flag:"-ab"`
 	AudioChannels         *int              `flag:"-ac"`
 	AudioVariableBitrate  *bool             `flag:"-q:a"`
-	BufferSize            *int              `flag:"-bufsize"`
+	BufferSize            *string           `flag:"-bufsize"`
 	Threadset             *bool             `flag:"-threads"`
 	Threads               *int              `flag:"-threads"`
 	Preset                *string           `flag:"-preset"`
@@ -102,7 +102,7 @@ func (opts Options) GetStrArguments() []string {
 					values = append(values, k, fmt.Sprintf("%v", v))
 				}
 			}
-			
+
 			if vi, ok := value.(*int); ok {
 				values = append(values, flag, fmt.Sprintf("%d", *vi))
 			}
