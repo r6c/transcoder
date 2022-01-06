@@ -11,8 +11,8 @@ type Options struct {
 	Resolution            *string           `flag:"-s"`
 	VideoBitRate          *string           `flag:"-b:v"`
 	VideoBitRateTolerance *int              `flag:"-bt"`
-	VideoMaxBitRate       *int              `flag:"-maxrate"`
-	VideoMinBitrate       *int              `flag:"-minrate"`
+	VideoMaxBitRate       *string           `flag:"-maxrate"`
+	VideoMinBitrate       *string           `flag:"-minrate"`
 	VideoCodec            *string           `flag:"-c:v"`
 	Vframes               *int              `flag:"-vframes"`
 	FrameRate             *int              `flag:"-r"`
